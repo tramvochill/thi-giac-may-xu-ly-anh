@@ -27,4 +27,4 @@ out = np.zeros_like(img)
 out[mask_final] = [255, 0, 0]
 out[~mask_final] = (img[~mask_final] * 0.30).astype("uint8")
 
-print_saved(save_comparison(img, out, "application_red_object_detection.png", "Input", "Detected red object"))
+print_saved(save_comparison(img, out, "21_red_object_detection.png", "Input", "Detected red object"))
