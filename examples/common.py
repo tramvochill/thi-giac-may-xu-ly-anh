@@ -1,5 +1,6 @@
-from pathlib import Path
 import math
+import os
+from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
 
@@ -153,3 +154,5 @@ def save_comparison(original, processed, name, left="Input", right="Output"):
 
 def print_saved(path):
     print(f"saved: {path}")
+    if os.environ.get("SHOW_RESULT", "1") == "1":
+        os.startfile(str(path))
